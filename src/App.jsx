@@ -25,9 +25,9 @@ function App({ xIsNext, squares, onPlay }) {
   const winn = winner(squares);
   let status = "";
   if (winn) {
-    status = "winner" + winn;
+    status = "👑WINNER IS " + winn;
   } else {
-    status = "next player :" + (xIsNext ? "X" : "O");
+    status = "PLAYER : " + (xIsNext ? "X" : "O");
   }
 
   return (
@@ -67,9 +67,9 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let deskripsi = "";
     if (move > 0) {
-      deskripsi = "Go to move #" + move;
+      deskripsi = "Move To Section " + move;
     } else {
-      deskripsi = "Go to Game Start";
+      deskripsi = "Game Start";
     }
 
     return (
@@ -85,7 +85,8 @@ export default function Game() {
         <App xIsNext={xIsNext} squares={curentSquare} onPlay={handlePlay} />
       </div>
       <div className="game-info">
-        <ol>{moves}</ol>
+        <p>info game :</p>
+        <ul>{moves}</ul>
       </div>
     </div>
   );
