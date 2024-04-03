@@ -1,30 +1,91 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Times New Roman', Times, serif;
-  margin: 20px;
   padding: 0;
+  background-color: rgb(27, 133, 0);display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 3rem;
 }
 
 .square {
-  width: 35px;
-  height: 35px;
-  border: 1px solid black;
-  background-color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
+  width: 84px;
+  height: 84px;
+  border: .5px solid rgb(255, 99, 51);
+  background-color: rgb(27, 133, 0);
+  font-size: 4rem;
+  font-weight: semi-bold;
+  color: rgb(255, 99, 51);
   cursor: pointer;
+  font-family: monospace;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
-  width: 105px;
-  height: 105px;
+  width: 254px;
+  height: 254px;
+  border: .5px solid rgb(255, 99, 51);
+  box-shadow: 0px 0px 1px white;
 }
 
 .status {
   margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 2rem;
+  color: rgb(255, 99, 51);
+  text-shadow: 0px 0px 1px white;
+  font-family: monospace;
+}
+
+.game-info {
+  height: 180px;
+  border: 2px solid rgb(255, 99, 51);
+  box-shadow: 0px 0px 1px white;
+  padding: 5px 10px;
+  overflow-y: scroll;
+}
+
+div::-webkit-scrollbar{
+  display: none;
+}
+
+.game-info ul {
+  list-style: none;
+  margin: 5px auto;
+}
+
+.game-info li {
+  margin-top: 5px;
+}
+
+.game-info p {
+  color: rgb(255, 99, 51);
+  text-shadow: 0px 0px .5px white;
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+button {
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid rgb(255, 99, 51);
+  background-color: rgb(27, 133, 0);
+  color: rgb(255, 99, 51);
+  text-shadow: 0px 0px .5px white;
+  box-shadow: 0px 0px 1px white;
+  position: relative;
+  width: 100%;
 }
