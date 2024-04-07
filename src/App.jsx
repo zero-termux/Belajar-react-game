@@ -109,7 +109,7 @@ function winner(squares) {
     const b = lines[i][1];
     const c = lines[i][2];
 
-    if (squares[a] && squares[a] === squares[b] && squares[c]) {
+    if (squares[a] == squares[b] && squares[b] == squares[c]) {
       return squares[a];
     }
   }
