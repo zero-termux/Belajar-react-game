@@ -27,7 +27,7 @@ function App({ xIsNext, squares, onPlay }) {
   if (winn) {
     status = "👑WINNER IS " + winn;
   } else if (squares.every(square => square !== null)) {
-    status = "RESULT IS DRAW";
+    status = "GAME DRAW";
 } else {
     status = "PLAYER : " + (xIsNext ? "X" : "O");
   }
